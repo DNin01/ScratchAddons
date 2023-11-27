@@ -5,6 +5,7 @@ jobs:
   format:
     name: Format
     runs-on: ubuntu-latest
+    if: github.repository_owner == 'ScratchAddons' || github.event_name == 'workflow_dispatch'
     
     steps:
       - name: Checkout code
@@ -29,7 +30,7 @@ jobs:
           GITHUB_TOKEN: ${{ steps.generate-token.outputs.token }}
           
       - name: Prettify code (outside ScratchAddons)
-        if: steps.generate-token.outcome != 'success' && github.event_name == 'workflow_dispatch'
+        if: steps.generate-token.outcome != 'success'
         uses: ScratchAddons/prettier_action@master
         with:
           prettier_options: --write .
