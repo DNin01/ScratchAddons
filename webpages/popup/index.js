@@ -138,7 +138,7 @@ class Haddock {
     (async () => {
       while (true) {
         this.facingRight = !this.facingRight;
-        const duration = 6 + (Math.random() * 5); // 6-11 secs
+        const duration = 6 + Math.random() * 5; // 6-11 secs
         this.cycle(duration);
         await new Promise((resolve) => {
           setTimeout(resolve, duration * 1000);
@@ -155,8 +155,8 @@ class Haddock {
       this.elem.style.transform = `scaleX(${this.facingRight ? -1 : 1})`;
       // If the haddock is facing left, move to anywhere on the left half of the screen.
       // If the haddock is facing right, move to anywhere on the right half of the screen.
-      this.elem.style.left = ((Math.random() + this.facingRight) * (window.innerWidth / 2)) + "px";
-      this.elem.style.top = (Math.random() * window.innerHeight) + "px";
+      this.elem.style.left = (Math.random() + this.facingRight) * (window.innerWidth / 2) + "px";
+      this.elem.style.top = Math.random() * window.innerHeight + "px";
     }, 0);
   }
 }
