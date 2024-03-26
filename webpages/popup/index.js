@@ -131,4 +131,54 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   }
 });
 
+class Haddock {
+  constructor(elem) {
+    this.elem = elem;
+    this.facingRight = parseInt(elem.style.left) > 200;
+    (async () => {
+      while (true) {
+        this.facingRight = !this.facingRight;
+        const duration = 6 + (Math.random() * 5); // 6-11 secs
+        this.cycle(duration);
+        await new Promise((resolve) => {
+          setTimeout(resolve, duration * 1000);
+          console.log(duration);
+        });
+      }
+    })();
+  }
+
+  cycle(duration) {
+    this.elem.style.transitionProperty = "transform, left, top";
+    this.elem.style.transitionDuration = `0.2s, ${duration}s, ${duration}s`;
+    setTimeout(() => {
+      this.elem.style.transform = `scaleX(${this.facingRight ? -1 : 1})`;
+      // If the haddock is facing left, move to anywhere on the left half of the screen.
+      // If the haddock is facing right, move to anywhere on the right half of the screen.
+      this.elem.style.left = ((Math.random() + this.facingRight) * (window.innerWidth / 2)) + "px";
+      this.elem.style.top = (Math.random() * window.innerHeight) + "px";
+    }, 0);
+  }
+}
+
+function spawnFish(initX, initY) {
+  const fishElem = document.createElement("span");
+  fishElem.textContent = "🐟";
+  fishElem.style.pointerEvents = "none";
+  fishElem.style.position = "absolute";
+  fishElem.style.left = initX + "px";
+  fishElem.style.top = initY + "px";
+  fishElem.style.fontSize = "22px";
+  fishElem.style.textShadow = "#000 0px 2px 5px";
+  new Haddock(document.body.appendChild(fishElem));
+}
+
+// Between March 31, 2024 and April 2, 2024
+const now = Date.now();
+if (now > 1711897200000 && now < 1712070000000) {
+  spawnFish(20, 12);
+  spawnFish(340, 270);
+  spawnFish(50, 575);
+}
+
 chrome.runtime.sendMessage("checkPermissions");
