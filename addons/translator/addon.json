@@ -1,10 +1,10 @@
 {
   "name": "Project translator",
-  "description": "Translates variable, list, and broadcast message names into your display language. Sprite, costume, backdrop, and sound names as well as project content and block parameters are not translated.",
+  "description": "Translates variable, list, and broadcast message names into your display language. Sprite, costume, backdrop, and sound names as well as project content and block parameters are not translated. Uses Scratch's translate API (the same one used by the Translate extension) to obtain translations.",
   "credits": [
     {
       "name": "DNin01",
-      "link": "https://scratch.mit.edu/users/DNin01/"
+      "link": "https://github.com/DNin01/"
     }
   ],
   "info": [
@@ -12,14 +12,6 @@
       "id": "translateCanCorrupt",
       "text": "Once variable, list, and message names are translated, you can't undo the operation. Be careful, especially with your own projects.",
       "type": "notice"
-    },
-    {
-      "id": "usesTranslateService",
-      "text": "This addon uses Scratch's translate API (the same one used by the Translate extension) to obtain translations."
-    },
-    {
-      "id": "automaticNotice",
-      "text": "If the \"Automatically translate\" setting is enabled, the language of the project's code will be auto-detected when you open the editor, and translated if necessary."
     }
   ],
   "userscripts": [
