@@ -1,0 +1,13 @@
+{
+  "name": "Fake membership badges",
+  "description": "Adds the Scratch Membership badge to all profile pages and adds cat ears to your nav bar icon, which allows you to test these features with other addons.",
+  "userscripts": [
+    {
+      "url": "userscript.js",
+      "matches": ["https://scratch.mit.edu/*"],
+      "runAtComplete": false
+    }
+  ],
+  "versionAdded": "1.1000.0",
+  "tags": ["community", "beta", "profiles"]
+}
