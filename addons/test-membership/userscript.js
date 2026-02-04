@@ -1,9 +1,4 @@
 export default async function ({ addon }) {
-  const avatarWrapper = await addon.tab.waitForElement(".avatar-wrapper");
-  avatarWrapper.classList.add("avatar-badge-wrapper");
-  avatarWrapper.firstElementChild.classList.add("avatar-badge");
-  avatarWrapper.title = "Decorated by Scratch Addons";
-
   if (/https\:\/\/scratch.mit.edu\/users\/.+\//.test(location.href)) {
     const badge = document.createElement("img");
     badge.src =
@@ -11,5 +6,12 @@ export default async function ({ addon }) {
     badge.style.setProperty("opacity", 0.6);
     badge.title = "Added by Scratch Addons";
     (await addon.tab.waitForElement("#profile-data > .box-head")).appendChild(badge);
+  }
+
+  while (true) {
+    const avatarWrapper = await addon.tab.waitForElement(".avatar-wrapper", { markAsSeen: true });
+    avatarWrapper.classList.add("avatar-badge-wrapper");
+    avatarWrapper.firstElementChild.classList.add("avatar-badge");
+    avatarWrapper.title = "Decorated by Scratch Addons";
   }
 }

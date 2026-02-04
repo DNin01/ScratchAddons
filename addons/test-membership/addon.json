@@ -1,6 +1,6 @@
 {
   "name": "Fake membership badges",
-  "description": "Adds the Scratch Membership badge to all profile pages and adds cat ears to your nav bar icon, which allows you to test these features with other addons.",
+  "description": "Adds the Scratch Membership badge to all profile pages and adds cat ears to most avatars, which allows you to test these features with other addons.",
   "userscripts": [
     {
       "url": "userscript.js",
