@@ -15,6 +15,7 @@ on:
       - '**/*.js'
       - eslint.config.mjs
       - .github/workflows/eslint.yml
+  workflow_dispatch:
 
 jobs:
   scan:
