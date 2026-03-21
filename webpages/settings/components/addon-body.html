@@ -181,7 +181,8 @@
     user-select: none;
   }
   .addon-name-and-tags {
-    padding: 10px 0;
+    height: 100%;
+    align-content: center;
   }
   .addon-name {
     font-weight: 400;
@@ -207,13 +208,13 @@
   }
 
   .addon-topbar {
-    min-height: 52px;
-    padding-inline-end: 10px;
+    min-height: calc(32px + var(--item-outer-padding) * 2);
+    padding-inline-end: var(--item-outer-padding);
     display: flex;
     align-items: center;
   }
   .clickable-area {
-    padding-inline-start: 10px;
+    padding-inline-start: var(--item-outer-padding);
   }
   .addon-body {
     margin: 10px;
@@ -352,7 +353,10 @@
   }
   .addon-settings {
     padding-top: 5px;
-    padding-inline: 20px;
+    padding-inline: calc(var(--item-outer-padding) + 10px);
+  }
+  .addon-settings > :last-child {
+    margin-bottom: var(--item-outer-padding);
   }
   .addon-setting::after {
     content: "";
@@ -406,26 +410,13 @@
     .addon-description {
       display: none;
     }
-    .addon-topbar {
-      min-height: 44px;
-      padding-inline-end: 6px;
-    }
-    .clickable-area {
-      padding-inline-start: 6px;
-    }
     .addon-icon {
       margin-inline-end: 6px;
-    }
-    .addon-name-and-tags {
-      padding: 6px 0;
     }
     .addon-name {
       margin-inline-start: 8px;
     }
 
-    .addon-settings {
-      padding-inline: 16px;
-    }
     .preview-column {
       display: none;
     }
