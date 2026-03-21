@@ -75,6 +75,7 @@ h1 {
   scrollbar-width: thin;
   scrollbar-color: var(--gray-text) transparent;
   height: 100vh;
+  --item-outer-padding: 10px;
 }
 
 .addons-container .placeholder {
@@ -256,6 +257,7 @@ body.iframe #search-not-found {
 
   .addons-container {
     padding: 10px 0;
+    --item-outer-padding: 6px;
   }
 }
 

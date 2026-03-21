@@ -17,7 +17,7 @@
     align-items: center;
     cursor: pointer;
     margin: 0px 11px;
-    padding: 0px 10px;
+    padding: 0px var(--item-outer-padding);
     user-select: none;
   }
 
@@ -31,10 +31,6 @@
   }
 
   @media (max-width: 700px) {
-    .addon-group {
-      padding-inline: 6px;
-    }
-
     .addon-group > img {
       margin-inline-end: 5px;
     }
