@@ -20,7 +20,8 @@
 .more-settings .addon-body:first-child {
   margin-top: 0;
 }
-.more-settings .addon-body:last-child {
+.more-settings .addon-body:last-child,
+.more-settings .addon-settings > .addon-setting {
   margin-bottom: 0;
 }
 .more-settings .addon-topbar {
@@ -33,7 +34,6 @@
 }
 .more-settings .addon-settings {
   padding: 10px;
-  padding-bottom: 0;
 }
 .export-actions {
   flex-wrap: wrap;
