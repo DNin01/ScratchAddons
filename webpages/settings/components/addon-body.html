@@ -407,6 +407,22 @@
   }
 
   @media (max-width: 700px) {
+    /* Note: :nth-child of <selector> syntax added in Chrome 111 and Firefox 113 */
+    /* Not first in group or first search result */
+    .addons-container > div:not(.group-top, :nth-child(1 of .visible)) .addon-body {
+      margin-top: 0;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      border-top: none;
+    }
+    /* Not last in group or last search result */
+    .addons-container > div:not(.group-bottom, :nth-last-child(1 of .visible)) .addon-body {
+      margin-bottom: 0;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      border-bottom-color: var(--content-divider);
+    }
+
     .addon-description {
       display: none;
     }

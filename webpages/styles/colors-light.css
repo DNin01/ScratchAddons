@@ -33,6 +33,7 @@
   --header-hover-darken: rgba(0, 0, 0, 0.1);
 
   --content-border: #cfcfcf;
+  --content-divider: #ccc;
   --content-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   --content-separator: #aaa;
   --control-border: #aaa;

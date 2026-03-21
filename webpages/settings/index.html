@@ -285,7 +285,14 @@
             ></addon-body>
           </template>
           <template v-else>
-            <div v-for="addon of addonList">
+            <div
+              v-for="addon of addonList"
+              :class="{
+                'group-top': searchInput === '' && addon.headerAbove,
+                'group-bottom': searchInput === '' && addon.footerBelow,
+                'visible': addon.matchesSearch && addon.matchesCategory
+              }"
+            >
               <div
                 id="iframe-fullscreen-suggestion"
                 v-if="isIframe && addon.headerAbove && (hasNoResults || addon.group.id === 'enabled')"
