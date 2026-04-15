@@ -107,7 +107,6 @@ h1 {
   width: 16px;
   vertical-align: middle;
   filter: var(--content-icon-filter);
-  margin-inline-end: 8px;
 }
 
 .disabled {
@@ -176,9 +175,6 @@ h1 {
 }
 [dir="rtl"] .number-setting .clear-button {
   border-radius: 16px 0 0 16px;
-}
-.clear-button .icon-type {
-  margin: 0;
 }
 
 .reverted {
