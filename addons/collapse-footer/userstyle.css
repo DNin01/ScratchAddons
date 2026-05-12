@@ -20,7 +20,7 @@
 .sa-collapse-footer #footer .lists dl {
   margin-top: 0;
 }
-.sa-collapse-footer #footer.expanded {
+.sa-collapse-footer #footer:is(.expanded, :focus-within) {
   height: var(--footer-hover-height);
 }
 
@@ -41,7 +41,7 @@
   object-fit: contain;
 }
 
-.sa-collapse-footer #footer.expanded .sa-footer-arrow {
+.sa-collapse-footer #footer:is(.expanded, :focus-within) .sa-footer-arrow {
   opacity: 0;
 }
 
