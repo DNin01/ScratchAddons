@@ -1,5 +1,6 @@
 {
   "spark-md5": {
+    "title": "SparkMD5",
     "license": "MIT",
     "year": "2015",
     "fullname": "André Cruz <amdfcruz@gmail.com>"
@@ -13,29 +14,34 @@
     "license": "Apache-2.0"
   },
   "icu-message-formatter": {
+    "title": "ICU Message Formatter",
     "license": "Apache-2.0"
   },
   "vue": {
+    "title": "Vue.js",
     "license": "MIT",
     "year": "2013-2016",
     "fullname": "Yuxi Evan You"
   },
   "tinycolor2": {
+    "title": "TinyColor",
     "license": "MIT",
     "year": "",
     "fullname": "Brian Grinstead, http://briangrinstead.com"
   },
   "chartjs": {
+    "title": "Chart.js",
     "license": "MIT",
     "year": "2014-2022",
     "fullname": "Chart.js Contributors"
   },
-  "color-picker-web-component": {
+  "color-picker": {
     "license": "MIT",
     "year": "2020",
     "fullname": "Wouter Vroege <wouter@woutervroege.nl>"
   },
   "comlink": {
+    "title": "Comlink",
     "license": "Apache-2.0"
   },
   "Sora": {
@@ -45,11 +51,13 @@
     "email": "https://github.com/sora-xor/sora-font"
   },
   "sortable": {
+    "title": "SortableJS",
     "license": "MIT",
     "year": "2019",
     "fullname": "All contributors to Sortable"
   },
   "fuse": {
+    "title": "Fuse.js",
     "license": "Apache-2.0"
   },
   "idb": {
@@ -89,29 +97,36 @@
     "license": "GPL-2.0"
   },
   "blockly": {
+    "title": "Blockly",
     "license": "Apache-2.0"
   },
   "ant-design-icons": {
+    "title": "Ant Design Icons",
     "year": "2018-present",
     "fullname": "Ant UED, https://xtech.antfin.com/",
     "license": "MIT"
   },
   "bootstrap-icons": {
+    "title": "Bootstrap Icons",
     "year": "2019-2024",
     "fullname": "The Bootstrap Authors",
     "license": "MIT"
   },
-  "google-material-icons": {
+  "material-icons": {
+    "title": "Google Material Icons",
     "license": "Apache-2.0"
   },
   "heroicons": {
+    "title": "HeroIcons",
     "fullname": "Tailwind Labs, Inc.",
     "license": "MIT"
   },
-  "material-design-icons": {
+  "mdi": {
+    "title": "Pictogrammers Material Design Icons",
     "license": "Apache-2.0"
   },
   "unicons": {
+    "title": "Unicons",
     "license": "Apache-2.0"
   }
 }

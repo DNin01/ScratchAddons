@@ -56,7 +56,7 @@ for (const library of libraries) {
   vue.libraries = [
     ...vue.libraries,
     {
-      name: library,
+      name: info.title ?? library,
       license: licenseText,
     },
   ];
